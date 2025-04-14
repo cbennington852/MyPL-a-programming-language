@@ -1,0 +1,29 @@
+#Charles Bennington
+#generates psudo-random numbers
+
+struct seed {
+  val: int 
+}
+
+#Pesudo Random number generator
+int random(str : seed) {
+	var Xn:int = str.val       # Initial seed value
+    var a :int = 1103
+    var b :int = 12345
+    var m :int = 32768
+
+    Xn = (a * Xn) + b
+    Xn = Xn - ((Xn / m) * m)   #this is simulating mod
+    str.val = str.val + 1
+    return Xn
+}
+
+
+void main() {
+  println("Enter a new random seed:")
+  var s: int = int_val(readln())
+  var v: seed = new seed(s)
+  for i from 0 to 100 {
+    println(random(v))
+  }
+}

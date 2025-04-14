@@ -1,0 +1,35 @@
+#Charles Bennington
+#shows that psudo-random numbers aren't actually random
+
+struct seed {
+  val: int 
+}
+
+#Pesudo Random number generator
+int random(str : seed) {
+	var Xn:int = str.val       # Initial seed value
+    var a :int = 1103
+    var b :int = 12345
+    var m :int = 32768
+
+    Xn = (a * Xn) + b
+    Xn = Xn - ((Xn / m) * m)   #this is simulating mod
+    str.val = str.val + 1
+    return Xn
+}
+
+void main() {
+  println("Enter a new random seed:")
+  var s: int = int_val(readln())
+  println("Shows that psudo-random generators aren't actually random... Do you see the pattern? ")
+  var v: seed = new seed(s)
+  for i from 0 to 30 {
+    var z = random(v)
+    var max = 88
+    z = z - ((z / max) * max)
+    for k from z to 100 {
+        print("#")
+    }
+    println(" ")
+  }
+}

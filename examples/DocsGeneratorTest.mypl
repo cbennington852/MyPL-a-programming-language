@@ -1,0 +1,40 @@
+#----------------------------------------------------------------------
+# HW-6 Test Program: Mix of Arrays and Structs
+#----------------------------------------------------------------------
+
+/*
+  nodes with trees
+  @value: the value of the node
+  @right: the next node
+  @left: the left node
+*/
+struct node {
+  value: int,
+  right: int,
+  left: int
+}
+
+/*
+  adds things
+  @x: first num
+  @y: 2nd num
+*/
+int f1(x: int, y: int) {
+  var z: int = x + y
+  println("... in f1")
+  return z
+}
+
+/*
+  strings thing
+  @x: first string
+*/
+string f2(x: string) {
+  println("... in f2, x = " + x) 
+  return x + x
+}
+
+
+void main() {
+  print("sefse")
+}

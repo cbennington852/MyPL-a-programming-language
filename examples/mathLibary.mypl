@@ -1,0 +1,71 @@
+###########################################################################
+#Building a math library
+###########################################################################
+
+/*
+	adds two numbers
+	@x:first number
+	@y:second number
+*/
+@VM
+int add(x: int, y: int) {
+	ADD()
+	RET()
+}
+
+/*
+	returns pi
+*/
+@VM
+double pi() {
+	PUSH(3.14159)
+	RET()
+}
+
+/*
+	The circumference of a sphere
+	@radius : the radius of the sphere
+*/
+@VM
+double circumference_sphere(radius:double) {
+	PUSH(6.28318530718) # 2 * pi 
+	MUL()
+	RET()
+}
+
+/*
+	Gets the volume of a sphere
+	@radius : the radius of the sphere.  
+*/
+@VM
+double volume_sphere(radius:double) {
+	DUP()
+	DUP()
+	PUSH(4.18879020479)  #4/3 * pi
+	MUL()
+	MUL()
+	MUL()
+	RET()
+}
+
+/*
+  nodes with trees
+  @value: the value of the node
+  @right: the next node
+  @left: the left node
+*/
+struct node {
+  value: int,
+  right: int,
+  left: int
+}
+
+void main() {
+  println("Example Math Library ")
+  for n from 10 to 30{
+	print("Circumference: ")
+    print(circumference_sphere(dbl_val(n)))
+	print("      Volume: ")
+	println(volume_sphere(dbl_val(n)))
+  }
+}

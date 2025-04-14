@@ -1,0 +1,22 @@
+ Adding annotations to MyPL to give the user the ability to directly write VM code in their functions.
+	I would do this in addition to building a MyPL docs generator. 
+	Example:
+		@VM
+		int f1(x: int, y: int) {
+		  LOAD(0)
+		  LOAD(1)
+		  ADD()
+		  RET()
+		}
+	This could give the developer the ability to optimize code if they want. They would call the "@VM_CODE" annotation at the start of the function. 
+
+
+PLANNING: 
+	* add a new token to lexer called "annotation"
+	* modify simple parser to ignore the stmts of these "VM_FunDef"
+	* modify the AST parser to take in a new type of FunDef --- > VM_FunDef
+		- here is where we proccess the VM_INSTR
+	* Code Gen we simply process the special VM_FunDef, by adding it's list of instructions to the new 
+	
+	
+This is my 7th year of coding !
