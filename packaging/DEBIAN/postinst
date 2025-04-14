@@ -1,13 +1,6 @@
 #!/bin/sh
 
-adduser counter --system
-touch /tmp/currentCount.out
-#chown counter:counter /tmp/currentCount.outas
-chmod a+w /tmp/currentCount.out
-chmod a+x /usr/bin/counter.py
-chmod a+x /lib/systemd/system/
-systemctl daemon-reload
-service counter start
-
-
+sudo apt update
+sudo apt install -y openjdk-21-jdk
+echo "alias mypl='/usr/local/mypl/mypl'" >> ~/.bashrc
 
