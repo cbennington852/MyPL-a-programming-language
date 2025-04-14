@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: cpsc326.AnnotationsTests
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 s -- in cpsc326.AnnotationsTests
+cpsc326.AnnotationsTests.basicProgramWithDocsVMCallBelow -- Time elapsed: 0.043 s
+cpsc326.AnnotationsTests.parseTest -- Time elapsed: 0.002 s
+cpsc326.AnnotationsTests.expressionWithNonVMCode -- Time elapsed: 0.007 s
+cpsc326.AnnotationsTests.expressionWithBadOperator -- Time elapsed: 0.002 s
+cpsc326.AnnotationsTests.basicProgramWithComment -- Time elapsed: 0.002 s
+cpsc326.AnnotationsTests.badRetType -- Time elapsed: 0.004 s
+cpsc326.AnnotationsTests.expressionWithTooManyParens -- Time elapsed: 0.002 s
+cpsc326.AnnotationsTests.forgotAt -- Time elapsed: 0.003 s
+cpsc326.AnnotationsTests.basicProgramWithDocs -- Time elapsed: 0.001 s
+cpsc326.AnnotationsTests.main_VM -- Time elapsed: 0.001 s
+cpsc326.AnnotationsTests.basicProgram -- Time elapsed: 0.001 s
+cpsc326.AnnotationsTests.expressionWithNonVMCodeExpr -- Time elapsed: 0.001 s
+cpsc326.AnnotationsTests.basicProgram2 -- Time elapsed: 0.001 s
+cpsc326.AnnotationsTests.expressionWithNonVMCode2 -- Time elapsed: 0.002 s

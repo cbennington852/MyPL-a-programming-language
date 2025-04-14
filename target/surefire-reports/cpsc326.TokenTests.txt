@@ -1,0 +1,6 @@
+-------------------------------------------------------------------------------
+Test set: cpsc326.TokenTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in cpsc326.TokenTests
+cpsc326.TokenTests.basicTokenCreation -- Time elapsed: 0 s
+cpsc326.TokenTests.correctLineColumnTokenCreation -- Time elapsed: 0.001 s

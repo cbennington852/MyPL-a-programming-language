@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: cpsc326.myPLdocsTests
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in cpsc326.myPLdocsTests
+cpsc326.myPLdocsTests.basicFunDef -- Time elapsed: 0.006 s
+cpsc326.myPLdocsTests.basicStruct -- Time elapsed: 0.002 s
+cpsc326.myPLdocsTests.multiLineComment2 -- Time elapsed: 0 s
+cpsc326.myPLdocsTests.multiLineComment3 -- Time elapsed: 0.001 s
+cpsc326.myPLdocsTests.basicStructPoorFormatting -- Time elapsed: 0 s
+cpsc326.myPLdocsTests.multiLineComment -- Time elapsed: 0 s
+cpsc326.myPLdocsTests.nonTerminatedMultiComment -- Time elapsed: 0.001 s
+cpsc326.myPLdocsTests.oneSymbol -- Time elapsed: 0.001 s
+cpsc326.myPLdocsTests.leadingZero -- Time elapsed: 0.001 s
+cpsc326.myPLdocsTests.randomMultiComment -- Time elapsed: 0.001 s

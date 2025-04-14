@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: cpsc326.LexerTests
+-------------------------------------------------------------------------------
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in cpsc326.LexerTests
+cpsc326.LexerTests.invalidID -- Time elapsed: 0.003 s
+cpsc326.LexerTests.comparatorSymbols -- Time elapsed: 0 s
+cpsc326.LexerTests.basicDoubleLiterals -- Time elapsed: 0.001 s
+cpsc326.LexerTests.oneSymbolThenEOS -- Time elapsed: 0 s
+cpsc326.LexerTests.basicIdentifiersWithRestrictedWordsWithin -- Time elapsed: 0.001 s
+cpsc326.LexerTests.basicIntLiterals -- Time elapsed: 0 s
+cpsc326.LexerTests.otherReservedWords -- Time elapsed: 0 s
+cpsc326.LexerTests.oneCharacterStrings -- Time elapsed: 0.001 s
+cpsc326.LexerTests.specificErrorTest -- Time elapsed: 0 s
+cpsc326.LexerTests.missingDoubleDigit -- Time elapsed: 0.001 s
+cpsc326.LexerTests.invalidSymbol -- Time elapsed: 0.001 s
+cpsc326.LexerTests.oneSymbolPerline -- Time elapsed: 0 s
+cpsc326.LexerTests.emptyInput -- Time elapsed: 0.001 s
+cpsc326.LexerTests.tokensWithNoSpaces -- Time elapsed: 0 s
+cpsc326.LexerTests.specialLiterals -- Time elapsed: 0 s
+cpsc326.LexerTests.oneCommentThenEOS -- Time elapsed: 0 s
+cpsc326.LexerTests.numbersWithNoSpaces -- Time elapsed: 0 s
+cpsc326.LexerTests.nonTerminatedString -- Time elapsed: 0.001 s
+cpsc326.LexerTests.caseSensitivity -- Time elapsed: 0.001 s
+cpsc326.LexerTests.oneSymbolpt2 -- Time elapsed: 0 s
+cpsc326.LexerTests.loopStatementReservedWords -- Time elapsed: 0 s
+cpsc326.LexerTests.logicalOperators -- Time elapsed: 0 s
+cpsc326.LexerTests.twoComments -- Time elapsed: 0 s
+cpsc326.LexerTests.ifStatementReservedWords -- Time elapsed: 0 s
+cpsc326.LexerTests.invalidSymbolCombination -- Time elapsed: 0.001 s
+cpsc326.LexerTests.commentInNumber -- Time elapsed: 0 s
+cpsc326.LexerTests.invalidSymbolsUnicode -- Time elapsed: 0.004 s
+cpsc326.LexerTests.basicIdentifiers -- Time elapsed: 0.001 s
+cpsc326.LexerTests.oneSymbol -- Time elapsed: 0 s
+cpsc326.LexerTests.multiCharacterStrings -- Time elapsed: 0 s
+cpsc326.LexerTests.punctuationSymbols -- Time elapsed: 0 s
+cpsc326.LexerTests.leadingZero -- Time elapsed: 0.001 s
+cpsc326.LexerTests.tokensWithComments -- Time elapsed: 0 s
+cpsc326.LexerTests.invalidSymbolsTwo -- Time elapsed: 0.001 s
+cpsc326.LexerTests.primiteTypeNames -- Time elapsed: 0.001 s
