@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>MyPL Compiler</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: #f4f4f4;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #0f172a;
+			color: white;
+			padding: 20px;
+			text-align: center;
+		}
+
+		main {
+			padding: 40px 20px;
+			max-width: 900px;
+			margin: auto;
+		}
+
+		h1, h2 {
+			color: #1e40af;
+		}
+
+		.download-section {
+			margin-top: 30px;
+		}
+
+		.download-btn {
+			display: inline-block;
+			background-color: #1e40af;
+			color: white;
+			padding: 12px 24px;
+			border: none;
+			border-radius: 8px;
+			text-decoration: none;
+			font-weight: bold;
+			transition: background-color 0.3s ease;
+		}
+
+		.download-btn:hover {
+			background-color: #2563eb;
+		}
+
+		footer {
+			background-color: #0f172a;
+			color: white;
+			text-align: center;
+			padding: 15px;
+			margin-top: 40px;
+		}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>MyPL Compiler</h1>
+	<p>The blazing fast compiler for the MyPL programming language</p>
+</header>
+
+<main>
+	<h2>About MyPL</h2>
+	<p>MyPL is a new general-purpose programming language designed for performance, safety, and developer productivity. It features a clean syntax, strong typing, and modern tooling support.</p>
+
+	<h2>Features</h2>
+	<ul>
+		<li>Fast compilation</li>
+		<li>Memory un-safety</li>
+		<li>Linux support</li>
+		<li>No package manager or tooling</li>
+		<li>Ability to Directly write JAVA VM like code </li>
+	</ul>
+
+	<div id="download-section">
+		<h2>Current Download section</h2>
+
+	</div>
+</main>
+<script type="module">
+	const res = await fetch("https://api.github.com/repos/cbennington852/MyPL-a-programming-language/actions/artifacts", {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
+
+
+	const data = await res.json(); // Convert response to JSON
+
+	console.log(data);
+	data.artifacts.forEach(download => {
+		let section = document.getElementById("download-section");
+		let url = `https://github.com/cbennington852/MyPL-a-programming-language/actions/runs/${download.workflow_run.id}/artifacts/${download.id}`;
+		section.innerHTML += `
+			<li><a href="${url}">${download.name} </a></li>
+		`;
+	});
+
+
+</script>
+<footer>
+	<p>© 2025 MyPL Project. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

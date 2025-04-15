@@ -10,9 +10,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
 
 jobs:
   build:
@@ -41,5 +41,13 @@ jobs:
       run: cd packaging/ && make build-deb
     - name: lint
       run: cd packaging/ && lintian  mypl.deb || true
+    - uses: actions/upload-artifact@v4
+      with:
+        # Name of the artifact to upload.
+        # Optional. Default is 'artifact'
+        name: MyPL_compiler__$GITHUB_REF_NAME
     
+        # A file, directory or wildcard pattern that describes what to upload
+        # Required.
+        path: packaging/mypl.deb
     
