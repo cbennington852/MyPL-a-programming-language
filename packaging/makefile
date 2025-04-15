@@ -27,5 +27,5 @@ build-deb:
 	mv $(TEMP_DIR).deb mypl.deb
 lint-deb:
 	echo "linting deb"
-	#lintian  counter-v2.0.0.deb || true
+	lintian  mypl.deb || true
 
