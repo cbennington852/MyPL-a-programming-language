@@ -99,9 +99,11 @@
 	data.artifacts.forEach(download => {
 		let section = document.getElementById("download-section");
 		let url = `https://github.com/cbennington852/MyPL-a-programming-language/actions/runs/${download.workflow_run.id}/artifacts/${download.id}`;
-		section.innerHTML += `
+		if (download.name !== "github-pages") {
+			section.innerHTML += `
 			<li><a href="${url}">${download.name} </a></li>
 		`;
+		}
 	});
 
 
