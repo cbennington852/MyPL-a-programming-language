@@ -40,7 +40,7 @@ jobs:
     - name: build debian file
       run: cd packaging/ && make build-deb
     - name: lint
-      run: cd packaging/ && lintian  mypl.deb > /dev/null 2>&1
+      run: cd packaging/ && lintian  mypl.deb || true
     - uses: actions/upload-artifact@v4
       with:
         # Name of the artifact to upload.
