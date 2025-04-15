@@ -31,8 +31,6 @@ jobs:
       run: mvn compile assembly:single
     - name: install lintian
       run: sudo apt-get install lintian -y
-    - name: lint
-      run: lintian  mypl.deb || true
     - name: Test
       run: mvn test
     - name: switch to package folder
@@ -40,8 +38,9 @@ jobs:
     - name: Show dir
       run: ls
     - name: build debian file
-      run: make build-deb
-
+      run: cd packaging/ && make build-deb
+    - name: lint
+      run: cd packaging/ && lintian  mypl.deb > /dev/null 2>&1
     - uses: actions/upload-artifact@v4
       with:
         # Name of the artifact to upload.
