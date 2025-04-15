@@ -32,7 +32,7 @@ jobs:
     - name: install lintian
       run: apt-get install lintian -y
     - name: lint
-      run: lintian  mypl.deb || true
+      run: sudo lintian  mypl.deb || true
     - name: Test
       run: mvn test
     - name: switch to package folder
