@@ -57,6 +57,26 @@
 			padding: 15px;
 			margin-top: 40px;
 		}
+		pre {
+			background: #f4f4f4;
+			border: 1px solid #ddd;
+			border-left: 3px solid #f36d33;
+			color: #666;
+			page-break-inside: avoid;
+			font-family: monospace;
+			font-size: 15px;
+			line-height: 1.6;
+			margin-bottom: 1.6em;
+			max-width: 100%;
+			overflow: auto;
+			padding: 1em 1.5em;
+			display: block;
+			word-wrap: break-word;
+		}
+		table {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	</style>
 </head>
 <body>
@@ -64,25 +84,63 @@
 <header>
 	<h1>MyPL Compiler</h1>
 	<p>The blazing fast compiler for the MyPL programming language</p>
+	<i>Created By Charles Bennington</i>
 </header>
 
 <main>
 	<h2>About MyPL</h2>
-	<p>MyPL is a new general-purpose programming language designed for performance, safety, and developer productivity. It features a clean syntax, strong typing, and modern tooling support.</p>
+	<p>MyPL is a new general-purpose programming language designed for performance, productivity, and developer control. It features a clean syntax, strong typing, and direct control.</p>
 
 	<h2>Features</h2>
 	<ul>
 		<li>Fast compilation</li>
-		<li>Memory un-safety</li>
+		<li>Direct control over VM</li>
 		<li>Linux support</li>
-		<li>No package manager or tooling</li>
-		<li>Ability to Directly write JAVA VM like code </li>
+		<li>Automatic documentation generator</li>
 	</ul>
 
 	<div id="download-section">
 		<h2>Current Download section</h2>
-
 	</div>
+	<h2>Hello World</h2>
+	<pre>
+		void main() {
+			println("Hello world")
+		}
+	</pre>
+	<h2>Examples</h2>
+	<p>Below is an example function for MyPL. It demonstrates the basic functionality.
+
+	</p>
+	<pre>
+		#----------------------------------------------------------------------
+		# HW-6 Test Program: Basic Functions
+		#----------------------------------------------------------------------
+
+		int f1(x: int, y: int) {
+			var z: int = x + y
+			println("... in f1")
+			return z
+		}
+
+		string f2(x: string) {
+			println("... in f2, x = " + x)
+			return x + x
+		}
+
+		string f3(x: string) {
+			x = f2(x)
+			println("... in f3, after f2, x = " + x)
+			return x
+		}
+
+		void main() {
+			var r1: int = f1(3, 4)
+			println("Should be 7: " + str_val(r1))
+			var r2: string = f3("ab")
+			println("Should be abab: " + r2)
+		}
+	</pre>
 </main>
 <script type="module">
 	const res = await fetch("https://api.github.com/repos/cbennington852/MyPL-a-programming-language/actions/artifacts", {
