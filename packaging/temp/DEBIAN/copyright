@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: mypl
+Upstream-Contact:  Charles Bennington <cbennington@zagmail.gonzaga.edu>
+Source:  # URL of the source code (if applicable)
+
+Files: *  counter.python
+Copyright: 2023 Your Name <your.email@example.com>
+License: GPL-3.0+  # Or the appropriate license
+
+
+License: GPL-3.0+  # Full text of the license(s)
+

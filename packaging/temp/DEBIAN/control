@@ -1,0 +1,9 @@
+Package: mypl
+Version: 1.0-1
+Depends: openjdk-21-jdk
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Charles Bennington <cbennington@zagmail.gonzaga.edu>
+Description: This is a compiler for the mypl 
+  This can be used to compile for mypl
