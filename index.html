@@ -77,19 +77,113 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+
+		/*HEADER*/
+		header {
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			/* Set the height of the header to 100% of the viewport height */
+			top: 0;
+			left: 0;
+			z-index: 1; /* set higher z-index value */
+		}
+
+		/* EXTRA CREDIT custom font */
+		/*Citation : https://sketchdeck.com/blog/combining-fonts/*/
+
+		header h1 {
+			text-align: center;
+			padding: 12px;
+			text-decoration: none;
+			font-size: 50px;
+			line-height: 25px;
+			border-radius: 4px;
+			font-family: "Century Gothic", serif;
+			color: #dddddd;
+		}
+
+		header div{
+			float: right;
+		}
+
+		header div a{
+			float: left;
+			color: whitesmoke;
+			text-align: center;
+			padding: 12px;
+			text-decoration: none;
+			font-size: 18px;
+			line-height: 25px;
+			border-radius: 4px;
+		}
+		#githubContact {
+			text-decoration: none;
+			color: #ff006a;
+			font-size: 130%;
+			font-weight: bold;
+			transition: all 0.3s ease-in-out; /* Smooth transition effect */
+		}
+		#githubContact:hover {
+			text-decoration: none;
+			color: #ff006a;
+			font-size: 140%; /* Slightly increase font size on hover */
+			font-weight: bold;
+			border: 2px solid #ff006a; /* Add a border on hover */
+
+		}
+
+
+		#linkedInContact {
+			text-decoration: none;
+			color: #0e76a8;
+			font-size: 130%;
+			font-weight: bold;
+			transition: all 0.3s ease-in-out; /* Smooth transition effect */
+		}
+		#linkedInContact:hover {
+			text-decoration: none;
+			color: #0e76a8;
+			font-size: 140%; /* Slightly increase font size on hover */
+			font-weight: bold;
+			border: 2px solid #0e76a8; /* Add a border on hover */
+
+		}
 	</style>
 </head>
 <body>
 
 <header>
-	<h1>MyPL Compiler</h1>
-	<p>The blazing fast compiler for the MyPL programming language</p>
-	<i>Created By Charles Bennington</i>
+
+	<table>
+		<tr>
+			<td>
+				<h1>MyPL Compiler</h1>
+				<p>The blazing fast compiler for the MyPL programming language</p>
+			</td>
+			<td>
+				<div id="header-right">
+					<nav>
+						<a id="linkedInContact" href="https://cbennington852.github.io/Web-Resume/" target="_blank" style="">
+							<i class="fab fa-linkedin"></i> About the Creator
+						</a>
+						<a  id="githubContact" class="github" href="https://github.com/cbennington852/MyPL-a-programming-language" target="_blank" >
+							<i class="fab fa-github"></i> GitHub
+						</a>
+					</nav>
+				</div>
+			</td>
+		</tr>
+	</table>
 </header>
 
 <main>
 	<h2>About MyPL</h2>
-	<p>MyPL is a new general-purpose programming language designed for performance, productivity, and developer control. It features a clean syntax, strong typing, and direct control.</p>
+	<p>
+		MyPL is a new general-purpose programming language designed for performance, productivity, and developer control.
+		It features a clean syntax, strong typing, and direct control.
+		MyPL emphasizes a minimal yet expressive core language, enabling developers to write concise and readable code without sacrificing power or flexibility.
+	</p>
 
 	<h2>Features</h2>
 	<ul>
@@ -113,34 +207,74 @@
 
 	</p>
 	<pre>
-		#----------------------------------------------------------------------
-		# HW-6 Test Program: Basic Functions
-		#----------------------------------------------------------------------
-
 		int f1(x: int, y: int) {
 			var z: int = x + y
 			println("... in f1")
 			return z
 		}
 
-		string f2(x: string) {
-			println("... in f2, x = " + x)
-			return x + x
-		}
-
-		string f3(x: string) {
-			x = f2(x)
-			println("... in f3, after f2, x = " + x)
-			return x
-		}
-
 		void main() {
 			var r1: int = f1(3, 4)
 			println("Should be 7: " + str_val(r1))
-			var r2: string = f3("ab")
-			println("Should be abab: " + r2)
 		}
 	</pre>
+	<p>
+		More examples
+	</p>
+	<div id="moreExamples">
+
+	</div>
+	<h2>
+		Documentation
+	</h2>
+	<h3>println(value)</h3>
+	<p><strong>Description:</strong> Prints the given <code>value</code> followed by a newline character.</p>
+	<p><strong>Parameters:</strong> <code>value</code> - The value to print.</p>
+	<pre><code>println("Hello, world!")</code></pre>
+
+	<h3>print(value)</h3>
+	<p><strong>Description:</strong> Prints the given <code>value</code> without adding a newline.</p>
+	<p><strong>Parameters:</strong> <code>value</code> - The value to print.</p>
+	<pre><code>print("Hello")</code></pre>
+
+	<h3>str_val(value)</h3>
+	<p><strong>Description:</strong> Converts the given <code>value</code> (integer, float, etc.) to a string.</p>
+	<p><strong>Returns:</strong> A string representation of the value.</p>
+	<pre><code>str_val(42)     // "42"
+str_val(3.14)   // "3.14"</code></pre>
+
+	<h3>int_val(value)</h3>
+	<p><strong>Description:</strong> Converts a string or number to an integer.</p>
+	<p><strong>Returns:</strong> An integer value.</p>
+	<pre><code>int_val("23")   // 23</code></pre>
+
+	<h3>dbl_val(value)</h3>
+	<p><strong>Description:</strong> Converts a string or number to a double-precision floating point number.</p>
+	<p><strong>Returns:</strong> A double value.</p>
+	<pre><code>dbl_val("3.25") // 3.25</code></pre>
+
+	<h3>size(string)</h3>
+	<p><strong>Description:</strong> Returns the number of characters in the string.</p>
+	<p><strong>Returns:</strong> An integer length.</p>
+	<pre><code>size("foo bar") // 7</code></pre>
+
+	<h3>get(index, string)</h3>
+	<p><strong>Description:</strong> Retrieves the character at the specified <code>index</code> in the <code>string</code>.</p>
+	<p><strong>Parameters:</strong>
+	<ul>
+		<li><code>index</code> - The zero-based character position.</li>
+		<li><code>string</code> - The string to access.</li>
+	</ul>
+	</p>
+	<p><strong>Returns:</strong> A single-character string.</p>
+	<pre><code>get(0, "foo")   // "f"
+get(1, "foo")   // "o"</code></pre>
+
+	<h2>readln()</h2>
+	<p><strong>Description:</strong> Reads a full line of input from the user.</p>
+	<p><strong>Returns:</strong> A string containing the user's input.</p>
+	<pre><code>str = readln()</code></pre>
+
 </main>
 <script type="module">
 	const res = await fetch("https://api.github.com/repos/cbennington852/MyPL-a-programming-language/actions/artifacts", {
@@ -150,8 +284,15 @@
 		},
 	});
 
+	const examples = await fetch("https://api.github.com/repos/cbennington852/MyPL-a-programming-language/contents/examples", {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
 
 	const data = await res.json(); // Convert response to JSON
+	const dataExamples = await examples.json();
 
 	console.log(data);
 	data.artifacts.forEach(download => {
@@ -164,10 +305,15 @@
 		}
 	});
 
+	console.log(dataExamples);
+	dataExamples.forEach(download => {
+		let section = document.getElementById("moreExamples");
+		section.innerHTML += `<li><a href="${download.download_url}">${download.name} </a></li>`;
+	});
 
 </script>
 <footer>
-	<p>© 2025 MyPL Project. All rights reserved.</p>
+	<p>Created in 2025 <a href="https://cbennington852.github.io/Web-Resume/">Charles Bennington</a>.</p>
 </footer>
 
 </body>
