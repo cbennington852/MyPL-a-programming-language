@@ -1,10 +1,24 @@
-To build and test run 
-     ./test_docs.sh examples/mathLibary.mypl
-OR
-    .mypl fileToRun.mypl
+FOR CRANDALL
+
+The packaging folder contains the makefile, and some of the other important things 
+
+Write up is in the root directory. 
+...
+DEVOPS_Write_Up_and_Screenshots/Linux_and_Devops_Write_Up_Charles_Bennington.pdf
 
 
-Link to Video Presentation: 
+
+
+
+
+
+
+
+
+
+OPL INFORMATION (You can have a look if you want)
+
+Link to Video Presentation an overview of project: 
     https://youtu.be/-DOcoVvbfJA
 
 Link to Slideshow: 
